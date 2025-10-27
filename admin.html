@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PGS Store — Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" style="padding-top:24px">
+    <h1>PGS Store — Admin Panel</h1>
+    <div style="margin-top:16px">
+      <button id="refreshBtn" class="btn">Refresh Data</button>
+      <a href="index.html" class="btn small" style="margin-left:8px">Open Store</a>
+    </div>
+
+    <section style="margin-top:18px;background:#fff;padding:12px;border-radius:10px">
+      <h3>Products</h3>
+      <div id="productList"></div>
+      <h4 style="margin-top:12px">Add / Edit Product</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;">
+        <input id="pName" placeholder="Name" />
+        <input id="pPrice" placeholder="Price" />
+        <input id="pStock" placeholder="Stock" />
+        <input id="pImage" placeholder="Image URL" />
+      </div>
+      <div style="margin-top:8px"><button id="addProd" class="btn">Add Product</button></div>
+    </section>
+
+    <section style="margin-top:18px;background:#fff;padding:12px;border-radius:10px">
+      <h3>Orders</h3>
+      <div id="orderList"></div>
+    </section>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

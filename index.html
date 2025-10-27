@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PGS Store — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">PGS Store</div>
+      <div class="search">
+        <input id="searchInput" placeholder="Search products..." />
+      </div>
+      <div class="actions">
+        <a href="admin.html" class="btn small">Admin</a>
+        <button id="cartBtn" class="btn">Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h1>Big Sale — Welcome to PGS Store</h1>
+      <p>Up to 50% off on selected items. Fast delivery.</p>
+    </section>
+
+    <section class="products" id="products"></section>
+  </main>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-inner">
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <div class="cart-actions">
+        <div class="total">Total: <span id="cartTotal">0.00</span></div>
+        <button id="checkoutBtn" class="btn">Checkout</button>
+        <button id="closeCart" class="btn outline">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-inner">
+      <h3>Checkout</h3>
+      <form id="checkoutForm">
+        <label>Full name <input name="name" required></label>
+        <label>Phone <input name="phone" required></label>
+        <label>Address <textarea name="address" required></textarea></label>
+        <fieldset>
+          <legend>Payment method</legend>
+          <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+          <label><input type="radio" name="payment" value="card"> Bank Card</label>
+          <label><input type="radio" name="payment" value="easypaisa"> Easypaisa</label>
+        </fieldset>
+        <div id="cardForm" class="hidden">
+          <label>Card number <input name="cardnumber" maxlength="19"></label>
+          <label>Expiry <input name="expiry" placeholder="MM/YY"></label>
+          <label>CVC <input name="cvc" maxlength="4"></label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Place Order</button>
+          <button type="button" id="cancelCheckout" class="btn outline">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
